@@ -284,29 +284,20 @@
   }
 }
 
-	body {
+  body {
 		display: flex;
-		align-items: center; /* Center vertically */
+		align-items: flex-end; /* Center vertically */
 		justify-content: center; /* Center horizontally */
 		min-height: 100vh;
 		background-color: var(--dark-color);
-		overflow: hidden;
-		position: relative;
-		perspective: 1000px;
-		overflow-x: hidden; /* Prevent horizontal scroll */
-		overflow-y: hidden; /* Prevent vertical scroll */
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		overflow: hidden !important; /* Disable all scrolling */
+		position: fixed !important; /* Prevent viewport shifting */
+		top: 0;
+		left: 0;
 	}
-	
-
-body {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  min-height: 100vh;
-  background-color: var(--dark-color);
-  overflow: hidden;
-  perspective: 1000px;
-}
 
 .night {
   position: fixed;
@@ -329,8 +320,10 @@ body {
 }
 
 .flower {
-  position: absolute;
-  bottom: 10vmin;
+	position: fixed;
+  bottom: 10vmin; /* Keeps the flower 10% from the bottom of the viewport */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%) translateY(0); /* Adjust to center element properly */
   transform-origin: bottom center;
   z-index: 10;
   --fl-speed: 0.3s;
