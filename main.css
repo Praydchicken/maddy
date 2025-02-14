@@ -8,13 +8,13 @@
 
 :root {
   --dark-color: #000;
-	--color-env: #da83f0;
-	--color-env2: #bc64c4;
-	--color-flap: #a54aad;
+	--color-env: #E4A0B7;
+	--color-env2: #d589a5;
+	--color-flap: #c07691;
 	--color-bg: #cf5cda;
 	--color-heart: #ff85a2;
 	--color-sparkle: #fff;
-	--wax-red: #9f65b6;
+	--wax-red: #E18AAA;
 }
 
 #envelope {
