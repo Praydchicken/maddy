@@ -13,7 +13,7 @@
 </head>
 <body class="container">
 	<audio autoplay loop preload="auto" id="myaudio">
-    <source src="audio\audio1.mp3" type="audio/mp3">
+    <source src="audio\audio2.mp3" type="audio/mp3">
   </audio>
     <div class="night"></div>
     <div class="flowers">
@@ -368,6 +368,14 @@
 
 					function close() {
 							envelope.removeClass("open").addClass("close");
+					}
+
+				const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
+
+					if (prefersDarkMode.matches) {
+						document.documentElement.classList.remove('dark-theme');
+					} else {
+						document.documentElement.classList.add('light-theme');
 					}
 			});
 	</script>
