@@ -293,6 +293,8 @@
 		overflow: hidden;
 		position: relative;
 		perspective: 1000px;
+		overflow-x: hidden; /* Prevent horizontal scroll */
+		overflow-y: hidden; /* Prevent vertical scroll */
 	}
 	
 
